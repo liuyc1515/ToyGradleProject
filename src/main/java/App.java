@@ -6,6 +6,8 @@ import com.alibaba.fastjson.JSONObject;
 import toy.utils.MemoryWatcher;
 import toy.utils.CPUWatcher;
 
+import toy.learn.FutureCancel;
+
 public class App {
     public String getGreeting() {
         return "Hello world.";
@@ -19,5 +21,8 @@ public class App {
         JSONObject cpuUsageJson = new JSONObject(cpuWatcher.getUsage());
         System.out.println(String.format("Memory Usage: %s", JSONObject.toJSONString(memUsageJson, true)));
         System.out.println(String.format("CPU Usage: %s", JSONObject.toJSONString(cpuUsageJson, true)));
+        
+        FutureCancel demo = new FutureCancel();
+        demo.run();
     }
 }
