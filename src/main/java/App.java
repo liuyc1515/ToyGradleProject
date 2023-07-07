@@ -7,6 +7,8 @@ import toy.utils.MemoryWatcher;
 import toy.utils.CPUWatcher;
 
 import toy.learn.FutureCancel;
+import toy.learn.ForeachConsumer;
+import toy.learn.GetClassName;
 
 public class App {
     public String getGreeting() {
@@ -22,7 +24,7 @@ public class App {
         System.out.println(String.format("Memory Usage: %s", JSONObject.toJSONString(memUsageJson, true)));
         System.out.println(String.format("CPU Usage: %s", JSONObject.toJSONString(cpuUsageJson, true)));
         
-        FutureCancel demo = new FutureCancel();
+        GetClassName demo = new GetClassName();
         demo.run();
     }
 }
