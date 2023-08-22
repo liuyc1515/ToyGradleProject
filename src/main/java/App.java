@@ -26,5 +26,20 @@ public class App {
         
         GetClassName demo = new GetClassName();
         demo.run();
+
+        Runnable r1 = new Runnable() {
+            @Override
+            public void run() {
+                for (Integer i = 0; i < 10; ++i) {
+                    System.out.println(i);
+                }
+            }
+        };
+
+        Runnable r2 = r1;
+
+        r2.run();
+
+        System.out.println(r1.equals(r2));
     }
 }
