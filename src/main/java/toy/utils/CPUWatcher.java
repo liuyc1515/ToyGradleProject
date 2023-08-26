@@ -18,7 +18,7 @@ public class CPUWatcher implements Watcher {
 
     private Map<String, Object> getUsageOSMXBean() {
         OperatingSystemMXBean managerOSMXBean = (OperatingSystemMXBean) ManagementFactory.getOperatingSystemMXBean();
-        Double cpuLoad = managerOSMXBean.getSystemCpuLoad();
+        Double cpuLoad = managerOSMXBean.getCpuLoad();
         Map<String, Object> usageInfo = new TreeMap<String, Object>();
         usageInfo.put("using rate", cpuLoad);
         return usageInfo;
